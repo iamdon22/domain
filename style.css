@@ -1,219 +1,284 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-
-:root {
-  --primary-color: #a855f7;
-  --primary-color-dark: #9333ea;
-  --secondary-color: #ca8a04;
-  --text-dark: #1f2937;
-  --text-light: #6b7280;
-  --extra-light: #faf5ff;
-  --max-width: 1200px;
+@import 'utilities.css';
+:root{
+--primary: rgb(29, 221, 189);
+--bgDark: rgb(12, 12, 12);
+--white: rgb(250, 250, 250);
+--secondary: rgb(0, 59, 50);
+--bgLight: rgb(190, 181, 181);
 }
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+-webkit-font-smoothing: antialiased;
 }
-
-a {
-  text-decoration: none;
+header{
+background-color: var(--bgDark);
+clip-path: polygon(0 0, 100% 0, 100% 100%, 73% 94%, 0 100%);
 }
-
-body {
-  font-family: "Poppins", sans-serif;
+header nav .left a{
+color: var(--white);
+text-decoration: none;
+margin-right: 2rem;
+text-transform: uppercase;
+transition: all .2s ease;
 }
-
-nav {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #ffffff;
-  z-index: 99;
+header nav .left a:hover{
+color: var(--primary);
 }
-
-.nav__content {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 1.5rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+header nav {
+padding: 2rem 0;
 }
-
-nav .logo a {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--primary-color);
-  transition: 0.3s;
+header nav .logo{
+margin-right: 3rem;
 }
-nav .logo a:hover {
-  color: var(--primary-color-dark);
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+-webkit-font-smoothing: antialiased;
 }
-
-nav .checkbox {
-  display: none;
+header{
+background-color: var(--bgDark);
+clip-path: polygon(0 0, 100% 0, 100% 100%, 73% 94%, 0 100%);
 }
-
-nav input {
-  display: none;
+header nav .left a{
+color: var(--white);
+text-decoration: none;
+margin-right: 2rem;
+text-transform: uppercase;
+transition: all .2s ease;
 }
-nav .checkbox i {
-  font-size: 2rem;
-  color: var(--primary-color);
-  cursor: pointer;
+header nav .left a:hover{
+color: var(--primary);
 }
-
-ul {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  list-style: none;
-  transition: left 0.3s;
+header nav {
+padding: 2rem 0;
 }
-
-ul li a {
-  padding: 0.5rem 1rem;
-  border: 2px solid transparent;
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--text-dark);
-  transition: 0.3s;
+header nav .logo{
+margin-right: 3rem;
 }
-
-ul li a:hover {
-  border-top-color: var(--secondary-color);
-  border-bottom-color: var(--secondary-color);
-  color: var(--secondary-color);
+body{
+font-family: 'Poppins', sans-serif;
 }
-
-.section {
-  background-color: var(--extra-light);
+.container{
+max-width: 1152px;
+padding: 0 15px;
+margin: 0 auto;
 }
-
-.section__container {
-  min-height: 100vh;
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4rem;
+.hero{
+padding-top: 2rem;
+padding-bottom: 3rem;
 }
-
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.hero .left img{
+width: 400px;
 }
-
-.subtitle {
-  letter-spacing: 2px;
-  color: var(--text-light);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+.hero .right {
+color: var(--white);
+margin-top: -7rem;
 }
-
-.title {
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 3rem;
-  color: var(--text-dark);
-  margin-bottom: 1rem;
+.hero .right h6{
+font-size: 1.6rem;
+color: var(--primary);
+margin-bottom: 0.5rem;
 }
-
-.title span {
-  font-weight: 600;
+.hero .right h1{
+font-size: 4rem;
+font-weight: 100;
+line-height: 1.2;
+margin-bottom: 2rem;
 }
-
-.description {
-  line-height: 1.5rem;
-  color: var(--text-light);
-  margin-bottom: 2rem;
+.hero .right h1 span{
+color: var(--primary);
 }
-
-.action__btns {
-  display: flex;
-  gap: 1rem;
+.hero .right p{
+line-height: 1.9;
+margin-bottom: 2rem;
+  .flex{
+display: flex;
 }
-
-.action__btns button {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  padding: 1rem 2rem;
-  outline: none;
-  border: 2px solid var(--primary-color);
-  border-radius: 10px;
-  transition: 0.3s;
-  cursor: pointer;
+.items-centre{
+align-items: center;
 }
-
-.hire__me {
-  background-color: var(--primary-color);
-  color: #ffffff;
+.justify-between{
+justify-content: space-between;
 }
-
-.hire__me:hover {
-  background-color: var(--primary-color-dark);
+.justify-center{
+justify-content: center;
 }
-
-.portfolio {
-  color: var(--primary-color);
+.justify-right{
+justify-content: right;
 }
-
-.portfolio:hover {
-  background-color: var(--primary-color-dark);
-  color: #ffffff;
+.btn{
+padding: 0.6rem 2rem;
+font-size: 1rem;
+font-weight: 600;
+border: 2px solid transparent;
+outline: none;
+cursor: pointer;
+text-transform: uppercase;
+transition: all .2s ease;
 }
-
-.image {
-  display: grid;
-  place-items: center;
+.btn-primary{
+background-color: var(--primary);
+color: var(--secondary);
+margin-top: -15rem;
 }
-
-.image img {
-  width: min(25rem, 90%);
-  border-radius: 100%;
+.btn-primary:hover{
+background: transparent;
+border-color: var(--primary);
+color: var(--primary);
 }
-
-@media (width < 750px) {
-  nav .checkbox {
-    display: block;
-  }
-
-  ul {
-    position: absolute;
-    width: 100%;
-    height: calc(100vh - 85px);
-    left: -100%;
-    top: 85px;
-    background-color: var(--extra-light);
-    flex-direction: column;
-    justify-content: center;
-    gap: 3rem;
-  }
-
-  nav #check:checked ~ ul {
-    left: 0;
-  }
-
-  ul li a {
-    font-size: 1.25rem;
-  }
-
-  .section__container {
-    padding: 10rem 1rem 5rem 1rem;
-    text-align: center;
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .image {
-    grid-area: 1/1/2/2;
-  }
-
-  .action__btns {
-    margin: auto;
-  }
+.flex-1{
+flex: 1;
 }
+.btn-secondary{
+background: transparent;
+color: var(--primary);
+border-color: var(--primary);
+}
+.btn-secondary:hover{
+background: var(--primary);
+color: var(--secondary);
+}
+  <section class="about">
+<div class="container flex items-centre">
+<div class="left flex-1 justify-right">
+<img src="./images/man2.png" height="400px" alt="profile pic">
+</div>
+<div class="right flex-1">
+<h1>About <span>Me</span></h1>
+<h3>Hello! I'm Akshat Sharma.</h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque adipisci distinctio obcaecati aliquid,
+quia tempora quis optio repudiandae officia earum?
+Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+</p>
+<div class="socials">
+<a href="#"><img src="./images/website.png" width="40px"></a>
+<a href="#"><img src="./images/facebook.png" width="40px"></a>
+<a href="#"><img src="./images/instagram.png" width="40px"></a>
+<a href="#"><img src="./images/media-player.png" width="40px"></a>
+</div>
+</div>
+</div>
+</section>
+  section{
+padding: 6rem;
+}
+section.about h1{
+margin-bottom: 1rem;
+font-size: 1.6rem;
+font-weight: 600;
+}
+section.about h1 span{
+color: var(--primary);
+}
+section.about h3{
+font-size: 1rem;
+margin-bottom: 1rem;
+font-weight: 600;
+}
+section.about p{
+font-family: 'Lato', sans-serif;
+color: var(--secondary);
+line-height: 1.9rem;
+margin-bottom: 2rem;
+}
+section.about .socials{
+display: flex;
+}
+section.about .socials a{
+display: flex;
+align-items: center;
+justify-content: center;
+width: 35px;
+margin-right: 0.8rem;
+border-radius: 50%;
+}
+section.about .socials a:hover{
+background: var(--primary);
+}
+  <section class="services">
+<div class="container">
+<h1 class="services-head">Services</h1>
+<p>All your digital needs... covered.</p>
+<div class="card-grid">
+<div class="card">
+<img src="./images/graphic-design.png">
+<h2>Graphic Desgin</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, debitis?</p>
+</div>
+<div class="card">
+<img src="./images/world-wide-web.png">
+<h2>Web Development</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, debitis?</p>
+</div>
+<div class="card">
+<img src="./images/blogger.png">
+<h2>Content Writing</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, debitis?</p>
+</div>
+</div>
+</div>
+</section>
+  section.services{
+background: rgb(17, 17, 17)
+}
+.services-head{
+color: rgb(10, 9, 9);
+text-align: center;
+margin-bottom: 1rem;
+line-height: 0.5rem;
+color: var(--primary);
+}
+.services-head + p{
+color: var(--white);
+font-family: 'Lato', sans-serif;
+margin-bottom: 1rem;
+text-align: center;
+margin-bottom: 6rem;
+font-weight: 400;
+}
+.card img{
+width: 50px;
+background:white;
+}
+section.services .card-grid{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+column-gap: 2rem;
+}
+section.services .card-grid .card{
+background: var(--white);
+padding: 3rem 2rem;
+position: relative;
+text-align: center;
+transition: all .2s ease;
+}
+section.services .card-grid .card img{
+position: absolute;
+top: -1.5rem;
+left: 50%;
+transform: translateX(-50%);
+color: var();
+}
+section.services .card-grid .card h2{
+font-weight: 600;
+font-size: 1.2rem;
+margin-bottom: 0.5rem;
+}
+section.services .card-grid .card p{
+font-family: 'Lato', sans-serif;
+color: var(--seconday);
+line-height: 1.6;
+}
+section.services .card-grid .card:hover{
+background: var(--primary);
+}
+section.services .card-grid .card:hover h2{
+color: var(--white);
+}
+section.services .card-grid .card:hover p{
+color: var(--white);
+}
+  
